@@ -1,6 +1,10 @@
 
 AWS S3-IMAGE GALLERY APP 
 
+
+
+
+
 Architecture Overview
 ![Screenshot 2024-12-25 at 11 58 33 AM](https://github.com/user-attachments/assets/399a78c4-498d-4138-8d6e-9b501f63d42e)
 
@@ -12,6 +16,8 @@ Prerequisite:
      pip install flask boto3
 
 Setup:
+
+
 1. Create one IAM user to fetch the S3 bucket objects follow below steps
 
 ![Screenshot 2024-12-25 at 12 29 26 AM (2)](https://github.com/user-attachments/assets/8b646177-fc5f-47bd-b1b3-065796619dc7)
@@ -27,6 +33,7 @@ Setup:
 <img width="1465" alt="Screenshot 2024-12-25 at 12 34 25 AM" src="https://github.com/user-attachments/assets/30d9c0c1-197a-4ecc-b654-8819720def14" />
 
 Copy the Access key and Secret access key from above
+
 
 
 2. Create S3 bucket to upload and fetch images from that image
@@ -81,6 +88,9 @@ s3:GetObject: Allows the user to retrieve (download) objects from the S3 bucket.
 s3:PutObject: Allows the user to upload objects to the S3 bucket.
 Resource: Defines the resource the policy applies to, which in this case is any object within the imagegalleryyyy bucket (arn:aws:s3:::imagegalleryyyy/*).
 In summary, this policy allows the user aws-automation-user to read from (download) and write to (upload) any object in the imagegalleryyyy S3 bucket.
+
+
+
 
 3) configure Flask app to use this aws user credentials,bucket name and s3 bucket region - https://github.com/suraj5929/image-gallery-app/blob/9d3eaf37f348c9cea7ac3ef289f8a9990ff3d11c/app.py#L10
 
