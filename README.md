@@ -1,4 +1,4 @@
-<img width="1470" alt="Screenshot 2024-12-25 at 12 42 10 PM" src="https://github.com/user-attachments/assets/f6a4134f-887c-4d03-a6b1-c38f84583ce1" />S3-IMAGE GALLERY APP 
+<img width="1465" alt="Screenshot 2024-12-25 at 12 34 25 AM" src="https://github.com/user-attachments/assets/cbbaa2b8-9866-496a-b1ac-7836296c785a" />S3-IMAGE GALLERY APP 
 
 Architecture Overview
 ![Screenshot 2024-12-25 at 11 58 33 AM](https://github.com/user-attachments/assets/399a78c4-498d-4138-8d6e-9b501f63d42e)
@@ -12,12 +12,19 @@ Prerequisite:
 
 Setup:
 1. Create one IAM user to fetch the S3 bucket objects follow below steps
+2. 
    ![Screenshot 2024-12-25 at 12 29 26 AM (2)](https://github.com/user-attachments/assets/8b646177-fc5f-47bd-b1b3-065796619dc7)
+   
 ![Screenshot 2024-12-25 at 12 29 59 AM](https://github.com/user-attachments/assets/341fcce6-d607-4608-81ad-bb3fd55eba2a)
+
 ![Screenshot 2024-12-25 at 12 32 47 AM](https://github.com/user-attachments/assets/2e56aaee-2766-4630-a9ac-98bc47631785)
+
 ![Screenshot 2024-12-25 at 12 33 10 AM](https://github.com/user-attachments/assets/3ca9b9d0-8af4-4669-b373-fac02059a4aa)
 
-<img width="1470" alt="Screenshot 2024-12-25 at 12 34 25 AM" src="https://github.com/user-attachments/assets/d2b8f34c-e856-48c3-bcbf-9280610b55c1" />
+
+
+<img width="1465" alt="Screenshot 2024-12-25 at 12 34 25 AM" src="https://github.com/user-attachments/assets/30d9c0c1-197a-4ecc-b654-8819720def14" />
+
 Copy the Access key and Secret access key from above
 
 2. Create S3 bucket to upload and fetch images from that image
@@ -29,10 +36,13 @@ for now create the bucket with default settings
 After that go to Bucket-->Permissions
 
 2a) Enable Block public access (bucket settings) -
+
 To ensure the security of your data, it's important to block public access in your cloud storage bucket settings. This feature, available in services like AWS S3, prevents unauthorized access by blocking public ACLs and policies that could inadvertently expose your data. By enabling "Block Public Access," you can protect sensitive information and control who can view or modify the contents of your storage, ensuring that only authorized users can access your bucket.
+
 ![Screenshot 2024-12-25 at 12 38 14 PM](https://github.com/user-attachments/assets/697a9814-b857-46e8-b9f2-f37d4e29b774)
 
 2b) bucket policy
+
 {
     "Version": "2012-10-17",
     "Id": "Policy1735103113184",
@@ -72,4 +82,5 @@ In summary, this policy allows the user aws-automation-user to read from (downlo
 
 3) configure Flask app to use this aws user credentials,bucket name and s3 bucket region - https://github.com/suraj5929/image-gallery-app/blob/9d3eaf37f348c9cea7ac3ef289f8a9990ff3d11c/app.py#L10
    and after that flask app looks like
+   
    ![Screenshot 2024-12-25 at 12 42 55 PM](https://github.com/user-attachments/assets/a862729b-031a-4167-86e1-19eadffae167)
