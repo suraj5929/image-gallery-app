@@ -52,24 +52,8 @@ To ensure the security of your data, it's important to block public access in yo
 
 2b) bucket policy
 
-{
-    "Version": "2012-10-17",
-    "Id": "Policy1735103113184",
-    "Statement": [
-        {
-            "Sid": "Stmt1735103112103",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::961341519998:user/aws-automation-user"
-            },
-            "Action": [
-                "s3:GetObject",
-                "s3:PutObject"
-            ],
-            "Resource": "arn:aws:s3:::imagegalleryyyy/*"
-        }
-    ]
-}
+![Screenshot 2024-12-25 at 12 53 13 PM](https://github.com/user-attachments/assets/096c915d-99ae-490e-910e-871c890606bb)
+
 This bucket policy is granting specific permissions to a user (aws-automation-user) from the AWS account 961341519998 for accessing objects in the S3 bucket imagegalleryyyy.
 
 Here's a breakdown of the policy:
@@ -89,7 +73,7 @@ s3:PutObject: Allows the user to upload objects to the S3 bucket.
 Resource: Defines the resource the policy applies to, which in this case is any object within the imagegalleryyyy bucket (arn:aws:s3:::imagegalleryyyy/*).
 In summary, this policy allows the user aws-automation-user to read from (download) and write to (upload) any object in the imagegalleryyyy S3 bucket.
 
-![Screenshot 2024-12-25 at 12 53 13 PM](https://github.com/user-attachments/assets/096c915d-99ae-490e-910e-871c890606bb)
+
 
 
 
