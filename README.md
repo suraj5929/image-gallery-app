@@ -89,10 +89,12 @@ s3:PutObject: Allows the user to upload objects to the S3 bucket.
 Resource: Defines the resource the policy applies to, which in this case is any object within the imagegalleryyyy bucket (arn:aws:s3:::imagegalleryyyy/*).
 In summary, this policy allows the user aws-automation-user to read from (download) and write to (upload) any object in the imagegalleryyyy S3 bucket.
 
+![Screenshot 2024-12-25 at 12 53 13 PM](https://github.com/user-attachments/assets/096c915d-99ae-490e-910e-871c890606bb)
 
 
 
 3) configure Flask app to use this aws user credentials,bucket name and s3 bucket region - https://github.com/suraj5929/image-gallery-app/blob/9d3eaf37f348c9cea7ac3ef289f8a9990ff3d11c/app.py#L10
+   As per the bucket policy, public access to the objects is blocked. To allow temporary public access, we have used a presigned URL, which is valid for one hour, enabling public access to the object for a limited time. 
 
     Flask App Screenshot:
 
