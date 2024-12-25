@@ -69,8 +69,6 @@ s3:GetObject: Allows the user to retrieve (download) objects from the S3 bucket.
 s3:PutObject: Allows the user to upload objects to the S3 bucket.
 Resource: Defines the resource the policy applies to, which in this case is any object within the imagegalleryyyy bucket (arn:aws:s3:::imagegalleryyyy/*).
 In summary, this policy allows the user aws-automation-user to read from (download) and write to (upload) any object in the imagegalleryyyy S3 bucket.
-![Screenshot 2024-12-25 at 12 42 10 PM (2)](https://github.com/user-attachments/assets/e0eb9a24-0bc3-420c-b1df-17db4eea96af)
-
 
 3) configure Flask app to use this aws user credentials,bucket name and s3 bucket region - https://github.com/suraj5929/image-gallery-app/blob/9d3eaf37f348c9cea7ac3ef289f8a9990ff3d11c/app.py#L10
    and after that flask app looks like
